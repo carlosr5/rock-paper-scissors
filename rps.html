@@ -1,4 +1,20 @@
 <!DOCTYPE html>
+<html>
+	<body>
+		<div>
+			<h2>
+				Play against the computer in a game of
+				rock-paper scissors!
+			</h2>
+			<div id="results">
+
+			</div>
+			<button id="rock">Rock</button>
+			<button id="paper">Paper</button>
+			<button id="scissors">Scissors</button>
+		</div>
+	</body>
+</html>
 <script>
 	function computerPlay(){
 		let myNum = Math.floor(Math.random() * 3);
@@ -31,9 +47,6 @@
 		let playerScore = 0;
 		let computerScore = 0;
 
-		//Prompt user here
-		let playerInput = prompt("Rock, paper, or scissors?");
-
 		let playerWon = playRound(playerInput, computerPlay());
 		if(playerWon == 1) {
 			return 1;
@@ -55,25 +68,25 @@
 
 	console.log("Welcome to Rock-Paper-Scissors!\n");
 
-	for(let i=0; i<5; i++) {
-		let playerWon = game();
-		let roundNum = i+1;
+	// for(let i=0; i<5; i++) {
+	// 	let playerWon = game();
+	// 	let roundNum = i+1;
 
-		if(playerWon == 1) {
-			let result = "Player won round " + roundNum + "!";
-			console.log(result);
-			playerScore++;
-		}
-		else if(playerWon == 0) {
-			let result = "Computer won round " + roundNum + "!";
-			console.log(result);
-			computerScore++;
-		}
-		else {
-			let result = "Tie game on round " + roundNum + "!";
-			console.log(result);
-		}
-	}
+	// 	if(playerWon == 1) {
+	// 		let result = "Player won round " + roundNum + "!";
+	// 		console.log(result);
+	// 		playerScore++;
+	// 	}
+	// 	else if(playerWon == 0) {
+	// 		let result = "Computer won round " + roundNum + "!";
+	// 		console.log(result);
+	// 		computerScore++;
+	// 	}
+	// 	else {
+	// 		let result = "Tie game on round " + roundNum + "!";
+	// 		console.log(result);
+	// 	}
+	// }
 
 	if(playerScore > computerScore) console.log("Player won against Computer! Congrats!");
 	else console.log("Computer won against Player! Better luck next time!");
